@@ -1,0 +1,179 @@
+/* Configurações gerais do corpo da página */
+body {
+    font-family: 'Prince', serif; /* Fonte personalizada */
+    background: linear-gradient(to bottom, #ffafbd, #ffc3a0); /* Fundo com gradiente */
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100dvh; /* Altura mínima baseada no tamanho da viewport dinâmica */
+    gap: 30px; /* Espaçamento entre os elementos */
+    margin: 0; /* Remove a margem padrão */
+}
+
+/* Estilo para o elemento de áudio */
+audio {
+    width: 300px;
+    height: 90px;
+    margin: 0 auto;
+    position: relative;
+    border-radius: 5px;
+    display: block;
+}
+
+/* Corações flutuantes */
+.heart {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: red; /* Cor vermelha */
+    clip-path: polygon(50% 0%, 100% 35%, 85% 100%, 50% 75%, 15% 100%, 0% 35%); /* Formato de coração */
+    animation: float 6s linear infinite; /* Animação de flutuação */
+    opacity: 0.7;
+}
+
+/* Animação de flutuação dos corações */
+@keyframes float {
+    0% {
+        transform: translateY(100vh) scale(0.5) rotate(0deg); /* Início: vem de baixo */
+        opacity: 0.8;
+    }
+    50% {
+        opacity: 1; /* Opacidade máxima no meio */
+    }
+    100% {
+        transform: translateY(-10vh) scale(1.2) rotate(360deg); /* Fim: sai por cima */
+        opacity: 0;
+    }
+}
+
+/* Estilo geral das polaroids */
+.polaroid {
+    opacity: 0; /* Oculto por padrão */
+    height: 400px;
+    width: 400px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+    border-radius: 10px;
+    gap: 5px;
+    position: absolute;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Polaroid selecionada */
+.polaroid.selecionado {
+    opacity: 1; /* Visível */
+    z-index: 1; /* Sobrepõe outras polaroids */
+    transform: scale(1.02); /* Leve aumento */
+}
+
+/* Estilo da lista de fotos */
+.lista-fotos {
+    background-color: white;
+    width: 400px;
+    height: 360px;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; /* Sombra suave */
+}
+
+/* Contêiner do slider */
+.slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 130px; /* Espaço entre os botões e a lista */
+}
+
+/* Imagem dentro da polaroid */
+.polaroid .imagem-polaroid {
+    border: 1px solid #ffc3a0; /* Borda correspondente ao gradiente */
+    max-width: 360px;
+    align-self: center;
+    object-fit: cover; /* Mantém proporções */
+}
+
+/* Informações da polaroid */
+.polaroid .informacoes {
+    border-radius: 5px;
+    text-align: left;
+    line-height: 1.5; /* Melhor legibilidade */
+    padding: 5px;
+}
+
+/* Descrição dentro das informações */
+.polaroid .informacoes .descricao {
+    padding: 10px;
+    max-height: 110px;
+    overflow-y: scroll; /* Adiciona rolagem se necessário */
+    font-size: 13px;
+}
+
+/* Botões de navegação (setas) */
+.btn-seta {
+    background-color: white;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px; /* Botão arredondado */
+    border: 0;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px; /* Sombra */
+}
+
+/* Botão de voltar */
+.btn-seta.btn-voltar {
+    transform: rotateY(180deg); /* Gira horizontalmente */
+}
+
+/* Efeito ao passar o mouse sobre o botão */
+.btn-seta:hover {
+    background: red; /* Muda a cor de fundo */
+    clip-path: polygon(50% 100%, 100% 65%, 100% 0%, 50% 25%, 0% 0%, 0% 65%); /* Forma estilizada */
+}
+
+/* Personalização da barra de rolagem */
+body::-webkit-scrollbar-track {
+    background: linear-gradient(to bottom, #ffafbd, #ffc3a0);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #ffafbd, #ffc3a0);
+    border-radius: 10px;
+}
+
+/* Segunda foto (fundo da polaroid) */
+.segunda-foto {
+    display: none; /* Oculto por padrão */
+}
+
+.segunda-foto.mostrar-segunda-foto {
+    background-color: #000000;
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: url(../imagens/polaroid-virada.jpg); /* Imagem da parte de trás */
+    background-size: cover;
+    background-position: center;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    z-index: 2;
+}
+
+/* Animação ao virar a polaroid */
+.polaroid.virar {
+    transform: rotate(350deg); /* Leve rotação */
+    transition: transform 0.3s ease-in-out;
+}

@@ -1,0 +1,11 @@
+/* Remove margens e preenchimentos padrões de todos os elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Inclui bordas e preenchimentos no tamanho total do elemento */
+}
+
+/* Remove o estilo padrão das listas */
+ul {
+    list-style: none; /* Remove os marcadores das listas */
+}

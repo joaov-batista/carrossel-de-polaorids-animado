@@ -1,0 +1,5 @@
+/* Define uma fonte personalizada chamada 'Prince' */
+@font-face {
+    font-family: 'Prince'; /* Nome da fonte que será utilizada no CSS */
+    src: url(../fontes/Prince\ Kaya.otf); /* Caminho para o arquivo da fonte */
+}

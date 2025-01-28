@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coloque seu título</title> <!-- Título da página exibido na aba do navegador -->
+    <link rel="icon" href="src/imagens/hearts.png" type="image/x-icon"> <!-- Ícone da página (favicon) -->
+
+    <!-- Importação dos arquivos de estilo -->
+    <link rel="stylesheet" href="src/css/fontes.css">
+    <link rel="stylesheet" href="src/css/reset.css">
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/css/responsivo.css">
+</head>
+
+<body>
+    <!-- Área principal que contém o slider -->
+    <main class="slider">
+        <!-- Botão para voltar no slider -->
+        <button class="btn-seta btn-voltar" id="btn-voltar">
+            <img src="src/imagens/seta.png" alt="seta voltar"> <!-- Ícone da seta de voltar -->
+        </button>
+
+        <!-- Lista de fotos do slider -->
+        <ul class="lista-fotos">
+            <!-- Primeira foto com descrição -->
+            <li class="polaroid selecionado">
+                <div class="segunda-foto"></div> <!-- Imagem exeibido ao clicar na polaroid -->
+                <img src="src/imagens/foto-1.jpg" alt="Descreva sua foto" class="imagem-polaroid"> <!-- Coloque a primeira foto -->
+                <div class="informacoes">
+                    <p class="descricao">
+                        Coloque seu texto aqui. <!-- Digite o texto que sera exibido aqui -->
+                    </p>
+                </div>
+            </li>
+
+            <!-- Segunda foto com descrição -->
+            <li class="polaroid">
+                <div class="segunda-foto"></div> <!-- Imagem exeibido ao clicar na polaroid -->
+                <img src="src/imagens/foto-2.jpg" alt="Descreva sua foto" class="imagem-polaroid"> <!-- Coloque a segunda foto -->
+                <div class="informacoes">
+                    <p class="descricao">
+                        Coloque seu texto aqui. <!-- Digite o texto que sera exibido aqui -->
+                    </p>
+                </div>
+            </li>
+
+            <!-- Terceira foto com descrição -->
+            <li class="polaroid">
+                <div class="segunda-foto"></div> <!-- Imagem exeibido ao clicar na polaroid -->
+                <img src="src/imagens/foto-3.jpg" alt="Descreva sua foto" class="imagem-polaroid"> <!-- Coloque a terceira foto -->
+                <div class="informacoes">
+                    <p class="descricao">
+                        Coloque seu texto aqui. <!-- Digite o texto que sera exibido aqui -->
+                    </p>
+                </div>
+            </li>
+
+            <!-- Quarta foto com descrição -->
+            <li class="polaroid">
+                <div class="segunda-foto"></div> <!-- Imagem exeibido ao clicar na polaroid -->
+                <img src="src/imagens/foto-4.jpg" alt="Descreva sua foto" class="imagem-polaroid"> <!-- Coloque a quarta foto -->
+                <div class="informacoes">
+                    <p class="descricao">
+                        Coloque seu texto aqui. <!-- Digite o texto que sera exibido aqui -->
+                    </p>
+                </div>
+            </li>
+        </ul>
+
+        <!-- Botão para avançar no slider -->
+        <button class="btn-seta btn-avancar" id="btn-avancar">
+            <img src="src/imagens/seta.png" alt="seta avançar"> <!-- Ícone da seta de avançar -->
+        </button>
+    </main>
+
+    <!-- Inclusão do arquivo JavaScript -->
+    <script src="src/js/index.js"></script>
+
+    <!-- Controle de áudio com música em loop -->
+    <audio id="audio" loop controls>
+        <source src="src/musica/fall-in-love.mp3" type="audio/mp3"> <!-- Arquivo de música -->
+        Seu navegador não suporta a tag de áudio. <!-- Mensagem para navegadores incompatíveis -->
+    </audio>
+</body>
+
+</html>
