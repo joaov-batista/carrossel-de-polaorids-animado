@@ -20,7 +20,7 @@ Além de ser uma maneira criativa de expressar carinho, é também uma excelente
 
 1. **Clone ou baixe o repositório:**  
    ```bash
-   git clone https://github.com/usuario/carrossel-de-polaroids.git
+   https://github.com/joaov-batista/carrossel-de-polaorids-animado/tree/main
 
   **Personalize o código:**
   - Substitua as imagens pelas fotos do casal.
@@ -33,4 +33,4 @@ Além de ser uma maneira criativa de expressar carinho, é também uma excelente
   **Link com tutorial detalhado:**
 
   # **Visualização**
-  **Visualize o projeto aqui:**
+  **Visualize o projeto aqui:** https://joaov-batista.github.io/carrossel-de-polaorids-animado/
