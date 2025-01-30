@@ -29,8 +29,6 @@ Além de ser uma maneira criativa de expressar carinho, é também uma excelente
   - Abra no navegador:
     
   Basta abrir o arquivo index.html em qualquer navegador.
-  
-  **Link com tutorial detalhado:**
 
   # **Visualização**
   **Visualize o projeto aqui:** https://joaov-batista.github.io/carrossel-de-polaorids-animado/
